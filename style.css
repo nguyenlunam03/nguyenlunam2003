@@ -98,8 +98,8 @@ header .shopping img{
     height: auto;
     display: inline-block;
     margin-top: 30px;
-    margin-bottom: 4%;
-    margin-left: 4%;
+    margin-bottom: 30;
+    margin-left: 5%;
 }
 .osanpham{
     position: relative;
