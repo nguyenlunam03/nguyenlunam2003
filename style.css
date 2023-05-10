@@ -169,14 +169,14 @@ header .shopping img{
     position: fixed;
     top: 0;
     left: 100%;
-    width: 40%;
+    width: 400px;
     background-color: rgb(211, 232, 212);
     height: 90vh;
     transition: 0.5s;
     z-index: 2;
 }
 .active .card{
-    left: calc(100% - 40%);
+    left: calc(100% - 400px);
 }
 .card h1{
     color: green;
