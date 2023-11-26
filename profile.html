@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Boostrap/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/profile.css">
+    <script src="./Boostrap/jquery-3.3.1.min.js"></script>
+    <script src="./Boostrap/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Hồ sơ người dùng</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HỒ SƠ NGƯỜI DÙNG</h1>
+        <div class="content">
+            <div class="avt">
+                <span><i class='bx bx-user'></i></span>
+            </div>
+            <div class="information">
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td id="ip__username"></td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại:</td>
+                        <td id="ip__tele"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td id="ip__email"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order__item">
+                <div class="order__icon">
+                    <span><i class='bx bxs-wallet-alt'></i></span>
+                </div>
+                <div class="order__des">
+                    <a href="#">Chờ xác nhận</a>
+                </div>
+            </div>
+            <div class="order__item">
+                <div class="order__icon">
+                    <span><i class='bx bx-package'></i></span>
+                </div>
+                <div class="order__des">
+                    <a href="#">Chờ lấy hàng</a>
+                </div>
+            </div>
+            <div class="order__item">
+                <div class="order__icon">
+                    <span><i class='bx bxs-truck'></i></span>
+                </div>
+                <div class="order__des">
+                    <a href="#">Chờ giao hàng</a>
+                </div>
+            </div>
+            <div class="order__item">
+                <div class="order__icon">
+                    <span><i class='bx bxs-star'></i></span>
+                </div>
+                <div class="order__des">
+                    <a href="#">Đánh giá</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Đã xem gần đây <span>></span></a></li>
+                <li><a href="#">Đánh giá của tôi <span>></span></a></li>
+                <li><a href="#">Trung tâm trợ giúp <span>></span></a></li>
+                <li><a href="#">Trò chuyện với shop <span>></span></a></li>
+                <li><a href="#">Xem lịch sử mua hàng <span>></span></a></li>
+                <li><a href="#">Kho voucher <span>></span></a></li>
+                <li><a href="#">Bảo hiểm của tôi <span>></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Lấy dữ liệu từ Local Storage
+        var userDataJSON = localStorage.getItem('userData');
+
+        // Kiểm tra xem dữ liệu có tồn tại hay không
+        if (userDataJSON) {
+            // Chuyển đổi chuỗi JSON thành đối tượng JavaScript
+            var userData = JSON.parse(userDataJSON);
+            var name = userData.name;
+            var sdt = userData.sdt;
+            var email = userData.email;
+            // Sử dụng dữ liệu như bạn muốn
+            document.querySelector('#ip__username').textContent = name;
+            document.querySelector('#ip__tele').textContent = sdt;
+            document.querySelector('#ip__email').textContent = email;
+        }
+    </script>
+</body>
+
+</html>
